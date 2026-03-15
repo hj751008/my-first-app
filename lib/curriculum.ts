@@ -88,10 +88,11 @@ export const middle1Units: Unit[] = [
   {
     id: 7,
     title: "입체도형의 성질",
-    description: "상자와 주사위처럼 생긴 입체를 관찰해요.",
+    description: "상자, 주사위, 캔처럼 익숙한 입체를 보며 구조를 읽어요.",
     prerequisite: "6단원 평면도형의 성질",
     progress: 0,
-    status: "planned",
+    status: "ready",
+    href: "/middle-1/solid-figures-properties",
   },
   {
     id: 8,

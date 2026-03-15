@@ -4,6 +4,7 @@ import { integersRationalContent } from "@/lib/content/integersRational";
 import { literalExpressionsContent } from "@/lib/content/literalExpressions";
 import { planeFiguresContent } from "@/lib/content/planeFigures";
 import { primeFactorizationContent } from "@/lib/content/primeFactorization";
+import { solidFiguresContent } from "@/lib/content/solidFigures";
 import type { LearningUnitContent } from "@/lib/content/types";
 import type { StructuredTutorReply, TutorAction, TutorState } from "@/lib/tutor";
 
@@ -726,6 +727,120 @@ export const unitDefinitions: Record<string, UnitDefinition> = {
       },
     },
     summaryPattern: /한 문장|정리|평행|사각형|삼각형|정사각형|직사각형|마름모|밑각|내 말로|배운 것/i,
+  },
+  "middle-1-solid-figures-properties": {
+    lessonKey: "middle-1-solid-figures-properties",
+    unitKey: "/middle-1/solid-figures-properties",
+    unitNumber: 7,
+    basePath: "/middle-1/solid-figures-properties",
+    content: solidFiguresContent,
+    theme: createTheme(
+      "bg-[linear-gradient(180deg,#fffdf7_0%,#eff6ff_45%,#f8fbff_100%)]",
+      "border-indigo-200",
+      "bg-indigo-50",
+      "text-indigo-700",
+      "bg-indigo-50",
+      "hover:border-indigo-400"
+    ),
+    quizTitle: "입체도형의 성질 감각 체크",
+    quizDescription:
+      "면, 모서리, 꼭짓점과 전개도를 얼마나 연결해서 보고 있는지 가볍게 확인해보자.",
+    resultDescription:
+      "지금 점수를 출발점으로 삼고 AI 튜터와 같이 보면, 입체도형을 물건처럼 떠올리고 전개도까지 이어 읽는 감각이 더 또렷해질 거야.",
+    tutorTitle: "입체도형의 성질 수업 시작",
+    tutorLoadingMessage:
+      "입체도형의 성질 콘텐츠를 바탕으로 지금 단계에 맞는 힌트를 고르는 중이야...",
+    textareaPlaceholder:
+      "예: 각기둥은 같은 밑면이 두 개 있고, 각뿔은 꼭대기로 모인다는 느낌이 들어.",
+    buttons: {
+      dontKnow: "모르겠어. 더 쉬운 물건 비유로 다시 설명해줘.",
+      hint: "힌트를 한 단계만 더 줘.",
+      reExplain: "같은 뜻을 다른 생활 예시로 다시 설명해줘.",
+    },
+    initialReply: {
+      encouragement: "좋은 시작이야.",
+      explanation:
+        "오늘은 입체도형을 상자나 캔처럼 익숙한 물건과 연결해서 읽는 연습을 같이 해보자.",
+      question:
+        "주사위를 떠올리면 면, 모서리, 꼭짓점 중에서 하나를 먼저 어떻게 설명하고 싶어?",
+      state: "diagnose",
+      display:
+        "좋은 시작이야. 오늘은 입체도형을 상자나 캔처럼 익숙한 물건과 연결해서 읽는 연습을 같이 해보자. 주사위를 떠올리면 면, 모서리, 꼭짓점 중에서 하나를 먼저 어떻게 설명하고 싶어?",
+    },
+    stateUi: {
+      diagnose: {
+        badge: "문제 이해 단계",
+        title: "입체도형에서 무엇을 먼저 봐야 하는지 잡는 중",
+        tone: "bg-sky-100 text-sky-700",
+        tips: [
+          "도형 이름보다 면, 선, 점 중 무엇을 묻는지 먼저 보기",
+          "실제 물건 하나를 떠올리며 구조를 말해보기",
+          "보이는 부분과 숨어 있는 부분을 나눠 생각하기",
+        ],
+      },
+      concept_intro: {
+        badge: "개념 연결 단계",
+        title: "입체도형을 생활 물건과 연결하는 중",
+        tone: "bg-violet-100 text-violet-700",
+        tips: [
+          "각기둥은 상자, 원기둥은 캔처럼 떠올리기",
+          "각뿔은 텐트나 피라미드처럼 꼭대기로 모이는 느낌 붙이기",
+          "전개도는 펼친 포장지라고 생각하기",
+        ],
+      },
+      guided_practice: {
+        badge: "직접 시도 단계",
+        title: "면, 모서리, 꼭짓점 관계를 말로 꺼내는 중",
+        tone: "bg-emerald-100 text-emerald-700",
+        tips: [
+          "면이 만나는 선이 무엇인지 먼저 말하기",
+          "선들이 만나는 점을 따로 구분하기",
+          "기둥과 뿔의 차이를 밑면 개수로 설명해보기",
+        ],
+      },
+      hint_1: {
+        badge: "힌트 1단계",
+        title: "입체도형의 핵심 구조를 다시 보는 중",
+        tone: "bg-amber-100 text-amber-700",
+        tips: [
+          "기둥은 같은 밑면이 두 개라는 점 먼저 보기",
+          "뿔은 한 꼭짓점으로 모인다는 점 떠올리기",
+          "점선은 숨은 모서리라는 사실 다시 떠올리기",
+        ],
+      },
+      hint_2: {
+        badge: "힌트 2단계",
+        title: "첫 설명을 같이 꺼내 보는 중",
+        tone: "bg-orange-100 text-orange-700",
+        tips: [
+          "면과 모서리 중 하나만 먼저 정확히 말해보기",
+          "보이는 부분부터 설명한 뒤 숨은 부분을 덧붙이기",
+          "전개도는 접히는 순서를 상상하며 보기",
+        ],
+      },
+      reflection: {
+        badge: "정리 단계",
+        title: "입체도형의 규칙을 네 말로 묶는 중",
+        tone: "bg-fuchsia-100 text-fuchsia-700",
+        tips: [
+          "기둥과 뿔의 차이를 한 문장으로 정리하기",
+          "면, 모서리, 꼭짓점의 뜻을 각각 말해보기",
+          "전개도가 왜 입체로 접히는지 다시 설명해보기",
+        ],
+      },
+      recover: {
+        badge: "회복 단계",
+        title: "더 쉬운 물건 예시로 다시 올라오는 중",
+        tone: "bg-rose-100 text-rose-700",
+        tips: [
+          "주사위나 우유갑처럼 익숙한 상자부터 보기",
+          "점선은 뒤에 숨은 선이라고만 먼저 기억하기",
+          "지금은 개수보다 구조를 보는 감각이 더 중요해",
+        ],
+      },
+    },
+    summaryPattern:
+      /한 문장|정리|입체도형|면|모서리|꼭짓점|각기둥|각뿔|전개도|네 말로|배운 것/i,
   },
 };
 

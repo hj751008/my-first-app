@@ -4,6 +4,7 @@ import { literalExpressionsContent } from "@/lib/content/literalExpressions";
 import { integersRationalContent } from "@/lib/content/integersRational";
 import { planeFiguresContent } from "@/lib/content/planeFigures";
 import { primeFactorizationContent } from "@/lib/content/primeFactorization";
+import { solidFiguresContent } from "@/lib/content/solidFigures";
 
 export type TutorRole = "assistant" | "user";
 
@@ -219,6 +220,20 @@ const LESSON_MAP = {
     misconceptions: [...planeFiguresContent.misconceptions],
     hintCards: [...planeFiguresContent.hintCards],
     generatedProblemPrompts: planeFiguresContent.generatedProblems.map(
+      (problem) => problem.prompt
+    ),
+  },
+  "middle-1-solid-figures-properties": {
+    phase: "phase_3_visual_intuition",
+    unit: solidFiguresContent.overview.title,
+    subunit: "면, 모서리, 꼭짓점과 전개도 읽기",
+    goalConcept: "입체도형의 구조를 생활 물건과 연결해서 읽는 감각",
+    problemType: "guided_practice",
+    tutorGoal:
+      "입체도형 이름만 외우기보다 면, 모서리, 꼭짓점과 접히는 구조를 함께 떠올리게 하기",
+    misconceptions: [...solidFiguresContent.misconceptions],
+    hintCards: [...solidFiguresContent.hintCards],
+    generatedProblemPrompts: solidFiguresContent.generatedProblems.map(
       (problem) => problem.prompt
     ),
   },
