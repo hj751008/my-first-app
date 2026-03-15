@@ -4,5 +4,7 @@ import { UnitTutorClient } from "@/app/middle-1/_shared/UnitTutorClient";
 import { getUnitDefinition } from "@/lib/units";
 
 export function TutorClient() {
-  return <UnitTutorClient unit={getUnitDefinition("middle-1-literal-expressions")} />;
+  return (
+    <UnitTutorClient unit={getUnitDefinition("middle-1-coordinate-plane-and-graphs")} />
+  );
 }

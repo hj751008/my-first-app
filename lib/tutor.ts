@@ -1,5 +1,8 @@
+import { basicGeometryContent } from "@/lib/content/basicGeometry";
+import { coordinatePlaneContent } from "@/lib/content/coordinatePlane";
 import { literalExpressionsContent } from "@/lib/content/literalExpressions";
 import { integersRationalContent } from "@/lib/content/integersRational";
+import { planeFiguresContent } from "@/lib/content/planeFigures";
 import { primeFactorizationContent } from "@/lib/content/primeFactorization";
 
 export type TutorRole = "assistant" | "user";
@@ -177,6 +180,45 @@ const LESSON_MAP = {
     misconceptions: [...literalExpressionsContent.misconceptions],
     hintCards: [...literalExpressionsContent.hintCards],
     generatedProblemPrompts: literalExpressionsContent.generatedProblems.map(
+      (problem) => problem.prompt
+    ),
+  },
+  "middle-1-coordinate-plane-and-graphs": {
+    phase: "phase_2_concept_connection",
+    unit: coordinatePlaneContent.overview.title,
+    subunit: "좌표 읽기와 점의 위치",
+    goalConcept: "점의 위치를 가로와 세로 이동으로 읽는 감각",
+    problemType: "guided_practice",
+    tutorGoal: "좌표를 지도처럼 읽고 x와 y의 순서를 안정적으로 구분하게 하기",
+    misconceptions: [...coordinatePlaneContent.misconceptions],
+    hintCards: [...coordinatePlaneContent.hintCards],
+    generatedProblemPrompts: coordinatePlaneContent.generatedProblems.map(
+      (problem) => problem.prompt
+    ),
+  },
+  "middle-1-basic-geometry": {
+    phase: "phase_3_visual_intuition",
+    unit: basicGeometryContent.overview.title,
+    subunit: "점, 선, 각의 기본 관계",
+    goalConcept: "점과 선과 각의 차이를 모양과 방향으로 읽는 감각",
+    problemType: "guided_practice",
+    tutorGoal: "도형 용어를 외우는 대신 길, 끝, 방향의 감각으로 연결하게 하기",
+    misconceptions: [...basicGeometryContent.misconceptions],
+    hintCards: [...basicGeometryContent.hintCards],
+    generatedProblemPrompts: basicGeometryContent.generatedProblems.map(
+      (problem) => problem.prompt
+    ),
+  },
+  "middle-1-plane-figures-properties": {
+    phase: "phase_3_visual_intuition",
+    unit: planeFiguresContent.overview.title,
+    subunit: "삼각형과 사각형의 핵심 규칙",
+    goalConcept: "도형의 성질을 변과 각의 규칙으로 읽는 감각",
+    problemType: "guided_practice",
+    tutorGoal: "도형 이름을 외우기보다 평행, 길이, 각의 관계를 규칙으로 연결하게 하기",
+    misconceptions: [...planeFiguresContent.misconceptions],
+    hintCards: [...planeFiguresContent.hintCards],
+    generatedProblemPrompts: planeFiguresContent.generatedProblems.map(
       (problem) => problem.prompt
     ),
   },

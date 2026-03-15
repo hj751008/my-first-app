@@ -61,10 +61,11 @@ export const middle1Units: Unit[] = [
   {
     id: 4,
     title: "좌표평면과 그래프",
-    description: "평면 위 위치와 변화량을 함께 읽는 연습을 해요.",
+    description: "평면 위 위치와 움직임을 점과 선으로 읽는 감각을 익혀요.",
     prerequisite: "3단원 문자와 식",
     progress: 0,
-    status: "locked",
+    status: "ready",
+    href: "/middle-1/coordinate-plane-and-graphs",
   },
   {
     id: 5,
@@ -72,7 +73,8 @@ export const middle1Units: Unit[] = [
     description: "점, 선, 각의 관계를 눈에 보이게 연결해요.",
     prerequisite: "4단원 좌표평면과 그래프",
     progress: 0,
-    status: "planned",
+    status: "ready",
+    href: "/middle-1/basic-geometry",
   },
   {
     id: 6,
@@ -80,7 +82,8 @@ export const middle1Units: Unit[] = [
     description: "삼각형과 사각형의 성질을 일상적인 모양으로 연결해요.",
     prerequisite: "5단원 기본 도형",
     progress: 0,
-    status: "planned",
+    status: "ready",
+    href: "/middle-1/plane-figures-properties",
   },
   {
     id: 7,
