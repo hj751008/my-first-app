@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { middle1Units } from "@/lib/curriculum";
 import {
+  SUJI_MATH_AI_STORAGE_PREFIX,
   getUnitMastery,
   getUnitProgress,
   readUnitMasteryMap,
@@ -151,6 +152,31 @@ export function ParentSummaryCard() {
     }
   }
 
+  function handleResetProgress() {
+    const shouldReset = window.confirm(
+      "테스트하면서 쌓인 학습 기록을 모두 지울까? 진행률, 퀴즈 점수, 튜터 대화 초안이 함께 초기화돼."
+    );
+
+    if (!shouldReset) {
+      return;
+    }
+
+    const keysToRemove: string[] = [];
+
+    for (let index = 0; index < window.localStorage.length; index += 1) {
+      const key = window.localStorage.key(index);
+      if (key?.startsWith(SUJI_MATH_AI_STORAGE_PREFIX)) {
+        keysToRemove.push(key);
+      }
+    }
+
+    keysToRemove.forEach((key) => {
+      window.localStorage.removeItem(key);
+    });
+
+    window.location.reload();
+  }
+
   return (
     <section className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_60px_-34px_rgba(15,23,42,0.28)]">
       <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -248,6 +274,13 @@ export function ParentSummaryCard() {
           {parentReport}
         </pre>
         <div className="mt-4 flex flex-wrap gap-3">
+          <button
+            type="button"
+            onClick={handleResetProgress}
+            className="rounded-full border border-rose-300 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:border-rose-400 hover:bg-rose-100"
+          >
+            테스트 기록 초기화
+          </button>
           <Link
             href="/middle-1/report"
             className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900"

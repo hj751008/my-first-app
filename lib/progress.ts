@@ -1,5 +1,6 @@
-export const UNIT_PROGRESS_STORAGE_KEY = "suji-math-ai:unit-progress";
-export const UNIT_MASTERY_STORAGE_KEY = "suji-math-ai:unit-mastery";
+export const SUJI_MATH_AI_STORAGE_PREFIX = "suji-math-ai:";
+export const UNIT_PROGRESS_STORAGE_KEY = `${SUJI_MATH_AI_STORAGE_PREFIX}unit-progress`;
+export const UNIT_MASTERY_STORAGE_KEY = `${SUJI_MATH_AI_STORAGE_PREFIX}unit-mastery`;
 
 export type UnitProgressMap = Record<string, number>;
 
