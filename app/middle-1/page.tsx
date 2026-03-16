@@ -19,7 +19,8 @@ export default function Middle1Page() {
             </h1>
             <p className="max-w-3xl text-base leading-7 text-slate-600">
               1단원부터 차례대로 들어가도 좋고, 필요한 단원부터 바로 시작해도 괜찮아.
-              퀴즈와 튜터에서 쌓인 기록은 자동으로 저장되고, 아래 단원 목록에 바로 반영돼.
+              퀴즈와 튜터에서 쌓인 기록은 자동으로 저장되고, 아래 단원 목록과 부모용 요약
+              카드에 함께 반영돼.
             </p>
           </div>
         </div>
