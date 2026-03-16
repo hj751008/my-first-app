@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ParentSummaryCard } from "./ParentSummaryCard";
 import { UnitGrid } from "./UnitGrid";
 
 export default function Middle1Page() {
@@ -22,6 +23,8 @@ export default function Middle1Page() {
             </p>
           </div>
         </div>
+
+        <ParentSummaryCard />
 
         <UnitGrid />
       </section>
