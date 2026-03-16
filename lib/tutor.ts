@@ -1,5 +1,6 @@
 import { basicGeometryContent } from "@/lib/content/basicGeometry";
 import { coordinatePlaneContent } from "@/lib/content/coordinatePlane";
+import { dataInterpretationContent } from "@/lib/content/dataInterpretation";
 import { literalExpressionsContent } from "@/lib/content/literalExpressions";
 import { integersRationalContent } from "@/lib/content/integersRational";
 import { planeFiguresContent } from "@/lib/content/planeFigures";
@@ -234,6 +235,20 @@ const LESSON_MAP = {
     misconceptions: [...solidFiguresContent.misconceptions],
     hintCards: [...solidFiguresContent.hintCards],
     generatedProblemPrompts: solidFiguresContent.generatedProblems.map(
+      (problem) => problem.prompt
+    ),
+  },
+  "middle-1-data-interpretation": {
+    phase: "phase_4_data_storytelling",
+    unit: dataInterpretationContent.overview.title,
+    subunit: "표와 그래프 읽기",
+    goalConcept: "자료를 비교와 차이의 이야기로 읽는 감각",
+    problemType: "guided_practice",
+    tutorGoal:
+      "숫자를 하나씩 읽는 데서 멈추지 않고, 가장 큰 값과 차이와 특징을 문장으로 연결하게 하기",
+    misconceptions: [...dataInterpretationContent.misconceptions],
+    hintCards: [...dataInterpretationContent.hintCards],
+    generatedProblemPrompts: dataInterpretationContent.generatedProblems.map(
       (problem) => problem.prompt
     ),
   },

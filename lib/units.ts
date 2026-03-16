@@ -1,5 +1,6 @@
 import { basicGeometryContent } from "@/lib/content/basicGeometry";
 import { coordinatePlaneContent } from "@/lib/content/coordinatePlane";
+import { dataInterpretationContent } from "@/lib/content/dataInterpretation";
 import { integersRationalContent } from "@/lib/content/integersRational";
 import { literalExpressionsContent } from "@/lib/content/literalExpressions";
 import { planeFiguresContent } from "@/lib/content/planeFigures";
@@ -841,6 +842,120 @@ export const unitDefinitions: Record<string, UnitDefinition> = {
     },
     summaryPattern:
       /한 문장|정리|입체도형|면|모서리|꼭짓점|각기둥|각뿔|전개도|네 말로|배운 것/i,
+  },
+  "middle-1-data-interpretation": {
+    lessonKey: "middle-1-data-interpretation",
+    unitKey: "/middle-1/data-interpretation",
+    unitNumber: 8,
+    basePath: "/middle-1/data-interpretation",
+    content: dataInterpretationContent,
+    theme: createTheme(
+      "bg-[linear-gradient(180deg,#fffdf7_0%,#eefcf5_45%,#f8fbff_100%)]",
+      "border-lime-200",
+      "bg-lime-50",
+      "text-lime-700",
+      "bg-lime-50",
+      "hover:border-lime-400"
+    ),
+    quizTitle: "자료의 정리와 해석 감각 체크",
+    quizDescription:
+      "표와 그래프에서 무엇이 많고 어떤 차이가 나는지 얼마나 자연스럽게 읽는지 가볍게 확인해보자.",
+    resultDescription:
+      "지금 점수를 출발점으로 삼고 AI 튜터와 같이 보면, 숫자를 그대로 읽는 데서 멈추지 않고 이야기로 정리하는 감각이 더 또렷해질 거야.",
+    tutorTitle: "자료의 정리와 해석 수업 시작",
+    tutorLoadingMessage:
+      "자료의 정리와 해석 콘텐츠를 바탕으로 지금 단계에 맞는 힌트를 고르는 중이야...",
+    textareaPlaceholder:
+      "예: 막대가 제일 높은 걸 보니까 수요일 운동 시간이 가장 긴 것 같아.",
+    buttons: {
+      dontKnow: "모르겠어. 더 쉬운 표 예시로 다시 설명해줘.",
+      hint: "힌트를 한 단계만 더 줘.",
+      reExplain: "같은 뜻을 다른 생활 예시로 다시 설명해줘.",
+    },
+    initialReply: {
+      encouragement: "좋은 출발이야.",
+      explanation:
+        "오늘은 표와 그래프 속 숫자를 그냥 읽는 게 아니라 이야기처럼 해석하는 연습을 같이 해보자.",
+      question:
+        "간식 선호도 표를 본다면, 너는 가장 먼저 어떤 항목이 제일 큰지부터 볼 것 같아?",
+      state: "diagnose",
+      display:
+        "좋은 출발이야. 오늘은 표와 그래프 속 숫자를 그냥 읽는 게 아니라 이야기처럼 해석하는 연습을 같이 해보자. 간식 선호도 표를 본다면, 너는 가장 먼저 어떤 항목이 제일 큰지부터 볼 것 같아?",
+    },
+    stateUi: {
+      diagnose: {
+        badge: "문제 이해 단계",
+        title: "표와 그래프에서 무엇을 비교하는지 잡는 중",
+        tone: "bg-sky-100 text-sky-700",
+        tips: [
+          "제목과 항목 이름부터 읽기",
+          "무엇이 가장 크고 작은지 먼저 찾기",
+          "숫자만 보지 말고 무엇을 뜻하는지 같이 보기",
+        ],
+      },
+      concept_intro: {
+        badge: "개념 연결 단계",
+        title: "숫자를 이야기로 바꾸는 감각을 만드는 중",
+        tone: "bg-violet-100 text-violet-700",
+        tips: [
+          "표는 정리된 메모장처럼 보기",
+          "그래프는 높이로 말하는 그림이라고 떠올리기",
+          "비교와 차이를 문장으로 바꾸기",
+        ],
+      },
+      guided_practice: {
+        badge: "직접 시도 단계",
+        title: "표와 그래프의 특징을 말로 꺼내는 중",
+        tone: "bg-emerald-100 text-emerald-700",
+        tips: [
+          "가장 큰 값 하나부터 말하기",
+          "두 값의 차이를 함께 말하기",
+          "마지막에 자료가 말해주는 특징을 한 문장으로 묶기",
+        ],
+      },
+      hint_1: {
+        badge: "힌트 1단계",
+        title: "읽는 순서를 다시 잡아주는 중",
+        tone: "bg-amber-100 text-amber-700",
+        tips: [
+          "제목과 항목 이름을 먼저 보기",
+          "가장 큰 값과 가장 작은 값을 나눠 보기",
+          "차이를 물으면 두 수를 비교해 보기",
+        ],
+      },
+      hint_2: {
+        badge: "힌트 2단계",
+        title: "첫 해석 문장을 같이 만드는 중",
+        tone: "bg-orange-100 text-orange-700",
+        tips: [
+          "가장 큰 값 하나를 먼저 말해보기",
+          "그다음 차이나 특징을 짧게 덧붙이기",
+          "숫자를 근거로 넣어서 문장 완성하기",
+        ],
+      },
+      reflection: {
+        badge: "정리 단계",
+        title: "자료가 말하는 이야기를 네 말로 묶는 중",
+        tone: "bg-fuchsia-100 text-fuchsia-700",
+        tips: [
+          "가장 큰 값과 이유를 함께 정리하기",
+          "비슷한 값이나 차이를 한 문장에 넣기",
+          "자료 해석이 왜 필요한지 다시 말해보기",
+        ],
+      },
+      recover: {
+        badge: "회복 단계",
+        title: "더 쉬운 숫자와 표로 다시 올라오는 중",
+        tone: "bg-rose-100 text-rose-700",
+        tips: [
+          "숫자가 2개나 3개뿐인 표부터 보기",
+          "가장 큰 값 하나만 먼저 찾기",
+          "지금은 계산보다 비교 감각이 더 중요해",
+        ],
+      },
+    },
+    summaryPattern:
+      /한 문장|정리|자료|표|그래프|가장 큰|차이|해석|네 말로|배운 것/i,
   },
 };
 

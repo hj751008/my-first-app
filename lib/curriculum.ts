@@ -99,6 +99,7 @@ export const middle1Units: Unit[] = [
     title: "자료의 정리와 해석",
     description: "표와 그래프를 읽으며 숫자 속 이야기를 찾아요.",
     progress: 0,
-    status: "planned",
+    status: "ready",
+    href: "/middle-1/data-interpretation",
   },
 ];
