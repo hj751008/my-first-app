@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { middle1Units } from "@/lib/curriculum";
 import {
@@ -246,6 +247,14 @@ export function ParentSummaryCard() {
         <pre className="mt-4 overflow-x-auto rounded-[1.25rem] bg-white p-4 text-sm leading-6 text-slate-700">
           {parentReport}
         </pre>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link
+            href="/middle-1/report"
+            className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900"
+          >
+            출력용 레이아웃 보기
+          </Link>
+        </div>
       </div>
     </section>
   );
