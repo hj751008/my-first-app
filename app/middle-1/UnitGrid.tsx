@@ -11,9 +11,9 @@ import {
 } from "@/lib/progress";
 
 const statusLabel = {
-  ready: "지금 시작 가능",
-  planned: "곧 확장 예정",
-  locked: "선수 단원 필요",
+  ready: "바로 시작 가능",
+  planned: "곧 열릴 예정",
+  locked: "선행 단원 필요",
 } as const;
 
 const statusStyle = {
@@ -51,7 +51,7 @@ export function UnitGrid() {
 
         const masteryBadges = [
           mastery.reachedGuidedPractice ? "직접 시도함" : null,
-          mastery.usedHint ? "힌트 경험" : null,
+          mastery.usedHint ? "힌트 사용함" : null,
           mastery.recoveredOnce ? "쉬운 단계 복귀" : null,
           mastery.reachedReflection ? "정리 단계 도달" : null,
           mastery.summaryAttempted ? "자기 말 설명 시도" : null,
@@ -61,9 +61,7 @@ export function UnitGrid() {
         const card = (
           <article className="flex h-full flex-col rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_-34px_rgba(15,23,42,0.35)] transition hover:-translate-y-1">
             <div className="mb-5 flex items-center justify-between gap-3">
-              <span className="text-sm font-semibold text-slate-400">
-                {unit.id}단원
-              </span>
+              <span className="text-sm font-semibold text-slate-400">{unit.id}단원</span>
               <span
                 className={`rounded-full px-3 py-1 text-xs font-bold ${statusStyle[unit.status]}`}
               >
@@ -72,9 +70,7 @@ export function UnitGrid() {
             </div>
             <div className="space-y-3">
               <h2 className="text-2xl font-bold">{unit.title}</h2>
-              <p className="min-h-18 text-sm leading-6 text-slate-600">
-                {unit.description}
-              </p>
+              <p className="min-h-18 text-sm leading-6 text-slate-600">{unit.description}</p>
             </div>
             <div className="mt-6 space-y-2">
               <div className="flex items-center justify-between text-xs font-semibold text-slate-400">
@@ -106,11 +102,11 @@ export function UnitGrid() {
             </div>
             <div className="mt-6 min-h-10 text-sm leading-6 text-slate-500">
               {unit.prerequisite
-                ? `먼저 ${unit.prerequisite}을 마치면 더 자연스럽게 배울 수 있어요.`
-                : "가장 먼저 시작하는 단원이라 바로 들어갈 수 있어요."}
+                ? `먼저 ${unit.prerequisite}을 마치면 더 자연스럽게 이어서 배울 수 있어.`
+                : "가장 먼저 시작하는 단원이라 바로 들어가도 괜찮아."}
             </div>
             <div className="mt-6 text-sm font-semibold text-slate-900">
-              {unit.status === "ready" ? "학습 시작하기 →" : "준비 중"}
+              {unit.status === "ready" ? "학습 시작하기" : "준비 중"}
             </div>
           </article>
         );

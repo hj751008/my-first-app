@@ -182,9 +182,7 @@ export function UnitTutorClient({ unit }: { unit: UnitDefinition }) {
       }
     } catch (submitError) {
       setError(
-        submitError instanceof Error
-          ? submitError.message
-          : "잠깐 문제가 생겼어. 다시 시도해보자."
+        submitError instanceof Error ? submitError.message : "잠깐 문제가 생겼어. 다시 시도해보자."
       );
     } finally {
       setIsLoading(false);
@@ -201,13 +199,17 @@ export function UnitTutorClient({ unit }: { unit: UnitDefinition }) {
       <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_18px_60px_-34px_rgba(15,23,42,0.35)]">
         <div className="mb-4 flex items-center justify-between gap-4">
           <div>
-            <p className={`text-sm font-semibold uppercase tracking-[0.2em] ${unit.theme.accentText}`}>
+            <p
+              className={`text-sm font-semibold uppercase tracking-[0.2em] ${unit.theme.accentText}`}
+            >
               AI 튜터 대화
             </p>
             <h1 className="mt-2 text-2xl font-black text-slate-900">{unit.tutorTitle}</h1>
           </div>
-          <span className={`rounded-full px-3 py-1 text-xs font-bold ${unit.theme.chipBg} ${unit.theme.accentText}`}>
-            콘텐츠 연결 완료
+          <span
+            className={`rounded-full px-3 py-1 text-xs font-bold ${unit.theme.chipBg} ${unit.theme.accentText}`}
+          >
+            단원 콘텐츠 연결 완료
           </span>
         </div>
 
@@ -342,11 +344,11 @@ export function UnitTutorClient({ unit }: { unit: UnitDefinition }) {
         <div className={`mt-6 rounded-[1.5rem] p-5 text-sm leading-6 text-slate-700 ${unit.theme.lightBg}`}>
           <p className="font-bold text-slate-900">현재 lesson context 힌트</p>
           <p className="mt-2">
-            힌트 단계는 <span className="font-semibold">{hintLevel}</span> 이고, 현재 튜터 상태는{" "}
-            <span className="font-semibold">{latestAssistantReply.state}</span> 야.
+            힌트 단계는 <span className="font-semibold">{hintLevel}</span>이고, 현재 튜터 상태는{" "}
+            <span className="font-semibold">{latestAssistantReply.state}</span>야.
           </p>
           <p className="mt-2">
-            지금 보이는 카드와 예시 문제는 모두 이 단원 콘텐츠 팩에서 가져온 앱용 콘텐츠야.
+            지금 보이는 카드와 문제 예시는 모두 이 단원 콘텐츠 팩에서 가져온 프로젝트 전용 자료야.
           </p>
         </div>
       </aside>

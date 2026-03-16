@@ -13,7 +13,9 @@ export function UnitOverview({ unit }: { unit: UnitDefinition }) {
           <article
             className={`rounded-[2rem] border bg-white/90 p-8 shadow-[0_18px_60px_-34px_rgba(15,23,42,0.35)] ${unit.theme.border}`}
           >
-            <p className={`text-sm font-semibold uppercase tracking-[0.25em] ${unit.theme.accentText}`}>
+            <p
+              className={`text-sm font-semibold uppercase tracking-[0.25em] ${unit.theme.accentText}`}
+            >
               {unit.unitNumber}단원 · {unit.content.overview.title}
             </p>
             <h1 className="mt-4 text-3xl font-black sm:text-5xl">
@@ -51,7 +53,7 @@ export function UnitOverview({ unit }: { unit: UnitDefinition }) {
           </article>
 
           <aside className="rounded-[2rem] border border-slate-200 bg-white/90 p-8 shadow-[0_18px_60px_-34px_rgba(15,23,42,0.28)]">
-            <h2 className="text-2xl font-bold">앱용으로 새로 만든 학습 포인트</h2>
+            <h2 className="text-2xl font-bold">수지가 자주 헷갈릴 수 있는 포인트</h2>
             <ul className="mt-5 space-y-4 text-sm leading-6 text-slate-600">
               {unit.content.misconceptions.map((item) => (
                 <li key={item}>{item}</li>
@@ -61,8 +63,8 @@ export function UnitOverview({ unit }: { unit: UnitDefinition }) {
             <div className="mt-8 rounded-[1.5rem] bg-slate-950 p-5 text-sm leading-6 text-slate-100">
               <p className="font-bold">콘텐츠 제작 원칙</p>
               <p className="mt-2 text-slate-300">
-                외부 자료는 내부 참고만 하고, 앱에 들어가는 문제와 설명은 수지 프로젝트용으로
-                새로 만든 콘텐츠만 사용해.
+                외부 자료는 참고만 하고, 앱 안의 문제와 해설과 힌트는 모두 이 프로젝트용으로
+                새로 만든 콘텐츠만 사용하고 있어.
               </p>
             </div>
           </aside>

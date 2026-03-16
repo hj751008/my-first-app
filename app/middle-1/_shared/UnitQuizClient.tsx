@@ -31,7 +31,9 @@ export function UnitQuizClient({ unit }: { unit: UnitDefinition }) {
   return (
     <div className="grid gap-6">
       <section className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_60px_-34px_rgba(15,23,42,0.28)]">
-        <p className={`text-sm font-semibold uppercase tracking-[0.25em] ${unit.theme.accentText}`}>
+        <p
+          className={`text-sm font-semibold uppercase tracking-[0.25em] ${unit.theme.accentText}`}
+        >
           진단 퀴즈
         </p>
         <h1 className="mt-3 text-3xl font-black text-slate-900">{unit.quizTitle}</h1>
@@ -45,7 +47,7 @@ export function UnitQuizClient({ unit }: { unit: UnitDefinition }) {
           key={question.id}
           className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_18px_60px_-34px_rgba(15,23,42,0.22)]"
         >
-          <p className="text-sm font-semibold text-slate-400">{question.id}번</p>
+          <p className="text-sm font-semibold text-slate-400">{question.id}번 문제</p>
           <h2 className="mt-2 text-xl font-bold text-slate-900">{question.prompt}</h2>
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
             {question.options.map((option) => {
@@ -100,7 +102,9 @@ export function UnitQuizClient({ unit }: { unit: UnitDefinition }) {
           </div>
         ) : (
           <div className="space-y-4">
-            <p className={`text-sm font-semibold uppercase tracking-[0.25em] ${unit.theme.accentText}`}>
+            <p
+              className={`text-sm font-semibold uppercase tracking-[0.25em] ${unit.theme.accentText}`}
+            >
               결과
             </p>
             <h2 className="text-3xl font-black text-slate-900">
@@ -109,8 +113,10 @@ export function UnitQuizClient({ unit }: { unit: UnitDefinition }) {
             <p className="max-w-2xl text-base leading-7 text-slate-600">
               {unit.resultDescription}
             </p>
-            <div className={`rounded-[1.5rem] p-5 text-sm leading-6 text-slate-700 ${unit.theme.lightBg}`}>
-              <p className="font-bold text-slate-900">다음에 이어갈 새 문제 예시</p>
+            <div
+              className={`rounded-[1.5rem] p-5 text-sm leading-6 text-slate-700 ${unit.theme.lightBg}`}
+            >
+              <p className="font-bold text-slate-900">다음에 이어갈 문제 예시</p>
               <ul className="mt-3 space-y-2">
                 {unit.content.generatedProblems.slice(0, 2).map((problem) => (
                   <li key={problem.id}>{problem.prompt}</li>
