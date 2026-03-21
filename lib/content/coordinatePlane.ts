@@ -55,6 +55,14 @@ export const coordinatePlaneContent = {
       firstHint: "두 점의 첫 번째 숫자와 두 번째 숫자를 따로 비교해 봐.",
       secondHint: "첫 번째 숫자가 같으면 같은 세로줄 위에 있다고 볼 수 있어.",
     },
+    {
+      id: "cp-hard-1",
+      level: "hard",
+      prompt: "점 A(2, -1)에서 오른쪽으로 3칸, 위로 4칸 이동한 점을 B라고 하자. 점 B에서 다시 왼쪽으로 5칸, 아래로 2칸 이동한 점 C의 좌표를 구하고, A와 C를 비교해 보자.",
+      answer: "B는 (5, 3), C는 (0, 1), C는 A보다 x좌표가 2만큼 작고 y좌표가 2만큼 크다",
+      firstHint: "이동을 한 번에 하지 말고 A에서 B, B에서 C 순서로 나누어 계산해 보자.",
+      secondHint: "A(2, -1)에서 +3, +4를 하면 B(5, 3), 거기서 -5, -2를 하면 C(0, 1)이야.",
+    },
   ],
   diagnosticQuiz: [
     {

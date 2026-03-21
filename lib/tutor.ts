@@ -1,11 +1,11 @@
-import { basicGeometryContent } from "@/lib/content/basicGeometry";
-import { coordinatePlaneContent } from "@/lib/content/coordinatePlane";
-import { dataInterpretationContent } from "@/lib/content/dataInterpretation";
-import { literalExpressionsContent } from "@/lib/content/literalExpressions";
-import { integersRationalContent } from "@/lib/content/integersRational";
-import { planeFiguresContent } from "@/lib/content/planeFigures";
-import { primeFactorizationContent } from "@/lib/content/primeFactorization";
-import { solidFiguresContent } from "@/lib/content/solidFigures";
+import { basicGeometryContent } from "./content/basicGeometry.ts";
+import { coordinatePlaneContent } from "./content/coordinatePlane.ts";
+import { dataInterpretationContent } from "./content/dataInterpretation.ts";
+import { literalExpressionsContent } from "./content/literalExpressions.ts";
+import { integersRationalContent } from "./content/integersRational.ts";
+import { planeFiguresContent } from "./content/planeFigures.ts";
+import { primeFactorizationContent } from "./content/primeFactorization.ts";
+import { solidFiguresContent } from "./content/solidFigures.ts";
 
 export type TutorRole = "assistant" | "user";
 

@@ -55,11 +55,19 @@ export const integersRationalContent = {
       firstHint: "4에서 왼쪽으로 7칸 움직인다고 생각해 봐.",
       secondHint: "0을 지나서 3칸 더 왼쪽으로 가면 -3이 돼.",
     },
+    {
+      id: "ir-hard-1",
+      level: "hard",
+      prompt: "엘리베이터가 2층에서 출발해 5층 내려갔다가 다시 3층 올라갔다. 마지막 위치를 정수식으로 나타내고, 왜 그 값이 되는지 설명해 보자.",
+      answer: "2 + (-5) + 3 = 0, 마지막 위치는 0층",
+      firstHint: "내려가는 움직임은 음수, 올라가는 움직임은 양수로 두면 식을 세우기 쉬워.",
+      secondHint: "2에서 시작해서 -5를 하면 -3, 거기서 +3을 하면 0이 돼.",
+    },
   ],
   diagnosticQuiz: [
     {
       id: 1,
-      prompt: "다음 중 가장 큰 수는 무엇일까?",
+      prompt: "-5, -1, 0, -3을 수직선에 놓고 가장 큰 수를 골라 보자.",
       options: ["-5", "-1", "0", "-3"],
       answer: "0",
       explanation: "수직선에서 0은 음수들보다 오른쪽에 있어서 더 커.",

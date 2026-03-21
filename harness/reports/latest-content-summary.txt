@@ -1,0 +1,11 @@
+[content harness]
+- primeFactorization: pass
+- integersRational: pass
+- literalExpressions: pass
+- coordinatePlane: pass
+- basicGeometry: pass
+- planeFigures: pass
+- solidFigures: pass
+- dataInterpretation: pass
+
+[summary] errors=0, warnings=0

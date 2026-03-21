@@ -1,0 +1,19 @@
+[content harness]
+- primeFactorization: warning
+  - [warning] primeFactorization: generatedProblems does not include a hard problem.
+- integersRational: warning
+  - [warning] integersRational: generatedProblems does not include a hard problem.
+- literalExpressions: warning
+  - [warning] literalExpressions: generatedProblems does not include a hard problem.
+- coordinatePlane: warning
+  - [warning] coordinatePlane: generatedProblems does not include a hard problem.
+- basicGeometry: warning
+  - [warning] basicGeometry: generatedProblems does not include a hard problem.
+- planeFigures: warning
+  - [warning] planeFigures: generatedProblems does not include a hard problem.
+- solidFigures: warning
+  - [warning] solidFigures: generatedProblems does not include a hard problem.
+- dataInterpretation: warning
+  - [warning] dataInterpretation: generatedProblems does not include a hard problem.
+
+[summary] errors=0, warnings=8

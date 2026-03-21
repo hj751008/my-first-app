@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "harness:content": "node --experimental-strip-types harness/content/validate-content.mts",
+    "harness:copyright": "node --experimental-strip-types harness/copyright/similarity-check.mts",
+    "harness:tutor": "node --experimental-strip-types harness/tutor/run-tutor-scenarios.mts",
+    "harness:preflight": "node --experimental-strip-types harness/preflight/run-preflight.mts"
   },
   "dependencies": {
     "next": "16.1.6",

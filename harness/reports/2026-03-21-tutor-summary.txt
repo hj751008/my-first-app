@@ -1,0 +1,9 @@
+[tutor harness]
+- default-guided-practice: pass
+- hint-level-1: pass
+- hint-level-2: pass
+- dont-know-recover: pass
+- re-explain-concept: pass
+- answer-check-reflection: pass
+
+[summary] errors=0, warnings=0

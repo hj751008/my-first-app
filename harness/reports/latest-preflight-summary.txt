@@ -1,0 +1,61 @@
+[preflight harness]
+- content harness: pass (exit=0)
+- tutor harness: pass (exit=0)
+- lint: manual (exit=1)
+- build: manual (exit=1)
+
+[summary] status=ready-with-manual-check
+[manual steps]
+- lint
+- build
+
+[details]
+--- content harness ---
+command: internal createContentReport()
+exit: 0
+stdout:
+[content harness]
+- primeFactorization: pass
+- integersRational: pass
+- literalExpressions: pass
+- coordinatePlane: pass
+- basicGeometry: pass
+- planeFigures: pass
+- solidFigures: pass
+- dataInterpretation: pass
+
+[summary] errors=0, warnings=0
+stderr:
+(empty)
+
+--- tutor harness ---
+command: internal createTutorScenarioReport()
+exit: 0
+stdout:
+[tutor harness]
+- default-guided-practice: pass
+- hint-level-1: pass
+- hint-level-2: pass
+- dont-know-recover: pass
+- re-explain-concept: pass
+- answer-check-reflection: pass
+
+[summary] errors=0, warnings=0
+stderr:
+(empty)
+
+--- lint ---
+command: npm run lint
+exit: 1
+stdout:
+(empty)
+stderr:
+spawnSync cmd.exe EPERM
+
+--- build ---
+command: npm run build
+exit: 1
+stdout:
+(empty)
+stderr:
+spawnSync cmd.exe EPERM

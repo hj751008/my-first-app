@@ -1,0 +1,52 @@
+[preflight harness]
+- content harness: pass (exit=0)
+- lint: manual (exit=1)
+- build: manual (exit=1)
+
+[summary] status=ready-with-manual-check
+[manual steps]
+- lint
+- build
+
+[details]
+--- content harness ---
+command: internal createContentReport()
+exit: 0
+stdout:
+[content harness]
+- primeFactorization: warning
+  - [warning] primeFactorization: generatedProblems does not include a hard problem.
+- integersRational: warning
+  - [warning] integersRational: generatedProblems does not include a hard problem.
+- literalExpressions: warning
+  - [warning] literalExpressions: generatedProblems does not include a hard problem.
+- coordinatePlane: warning
+  - [warning] coordinatePlane: generatedProblems does not include a hard problem.
+- basicGeometry: warning
+  - [warning] basicGeometry: generatedProblems does not include a hard problem.
+- planeFigures: warning
+  - [warning] planeFigures: generatedProblems does not include a hard problem.
+- solidFigures: warning
+  - [warning] solidFigures: generatedProblems does not include a hard problem.
+- dataInterpretation: warning
+  - [warning] dataInterpretation: generatedProblems does not include a hard problem.
+
+[summary] errors=0, warnings=8
+stderr:
+(empty)
+
+--- lint ---
+command: npm.cmd run lint
+exit: 1
+stdout:
+(empty)
+stderr:
+spawnSync C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe EPERM
+
+--- build ---
+command: npm.cmd run build
+exit: 1
+stdout:
+(empty)
+stderr:
+spawnSync C:\windows\System32\WindowsPowerShell\v1.0\powershell.exe EPERM

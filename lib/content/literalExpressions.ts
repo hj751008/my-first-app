@@ -55,6 +55,14 @@ export const literalExpressionsContent = {
       firstHint: "어떤 수를 먼저 x로 두고 시작해 봐.",
       secondHint: "3배는 3x, 거기에서 2 큰 수는 + 2야.",
     },
+    {
+      id: "le-hard-1",
+      level: "hard",
+      prompt: "연필 한 자루 가격을 x원이라고 할 때, 연필 3자루와 지우개 2개를 샀더니 모두 3x + 1000원이 되었다. 지우개 1개의 가격을 식으로 나타내 보자.",
+      answer: "500원",
+      firstHint: "전체 금액에서 연필 3자루 값 3x를 빼면 지우개 2개의 값이 남아.",
+      secondHint: "3x + 1000 - 3x = 1000 이고, 그 1000원이 지우개 2개의 값이니 2로 나누면 돼.",
+    },
   ],
   diagnosticQuiz: [
     {

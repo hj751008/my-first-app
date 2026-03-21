@@ -55,6 +55,14 @@ export const basicGeometryContent = {
       firstHint: "꼭짓점은 선이 만나는 자리야.",
       secondHint: "두 변이 만나면 방향의 벌어짐, 즉 각이 생겨.",
     },
+    {
+      id: "bg-hard-1",
+      level: "hard",
+      prompt: "세 점 A, B, C가 있을 때 선분 AB와 선분 BC가 한 점 B에서 만나 각을 만든다. 이때 점 B를 꼭짓점이라고 부르는 이유를 선분과 각의 관계를 이용해 설명해 보자.",
+      answer: "점 B는 두 선분이 만나는 점이고, 그 만남 때문에 각이 생기므로 꼭짓점이다",
+      firstHint: "꼭짓점은 그냥 뾰족한 곳이 아니라 두 선이나 두 변이 만나는 자리라는 점을 떠올려 봐.",
+      secondHint: "선분 AB와 BC가 공통으로 가지는 점이 B이고, 바로 그 점에서 방향이 갈라져 각이 만들어져.",
+    },
   ],
   diagnosticQuiz: [
     {
