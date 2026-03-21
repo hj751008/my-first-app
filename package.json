@@ -2,6 +2,7 @@
   "name": "my-first-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,6 +10,7 @@
     "lint": "eslint",
     "harness:content": "node --experimental-strip-types harness/content/validate-content.mts",
     "harness:copyright": "node --experimental-strip-types harness/copyright/similarity-check.mts",
+    "harness:extract-references": "python harness/reference-extract/extract_pdf_references.py",
     "harness:tutor": "node --experimental-strip-types harness/tutor/run-tutor-scenarios.mts",
     "harness:preflight": "node --experimental-strip-types harness/preflight/run-preflight.mts"
   },

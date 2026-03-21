@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "notes": [
+    "Use this manifest to stage small plaintext reference fixtures for the copyright harness.",
+    "Preferred initial coverage is primeFactorization, integersRational, and literalExpressions.",
+    "These source files are references only. App-facing wording must remain original."
+  ],
+  "priorityGroups": [
+    {
+      "priority": 1,
+      "unitKey": "primeFactorization",
+      "targetFixture": "primeFactorization.sources.txt",
+      "reason": "Top priority in the existing content-asset classification notes and easy to map to completed app content.",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅰ-1. 소인수분해.pdf",
+        "C:\\MathFile\\중1_ 미래엔 중단원마무리_1_1_소인수분해.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_1단원_발전.pdf",
+        "C:\\MathFile\\[동아출판] 중1_수준별문제집_대단원평가_1단원_1회.pdf"
+      ]
+    },
+    {
+      "priority": 2,
+      "unitKey": "integersRational",
+      "targetFixture": "integersRational.sources.txt",
+      "reason": "Second priority in the existing notes and a completed middle-1 unit with direct HWP source coverage.",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅰ-2. 정수와 유리수.pdf",
+        "C:\\MathFile\\중1_ 미래엔 중단원마무리_1_2_정수와_유리수.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_2단원_발전.pdf",
+        "C:\\MathFile\\[동아출판] 중1_수준별문제집_대단원평가_2단원_1회.pdf"
+      ]
+    },
+    {
+      "priority": 3,
+      "unitKey": "literalExpressions",
+      "targetFixture": "literalExpressions.sources.txt",
+      "reason": "Next recommended completed unit and still within the strongest source coverage documented in the workspace notes.",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅱ-1. 문자의 사용과 식의 계산.pdf",
+        "C:\\MathFile\\중1_ 미래엔 중단원마무리_2_1_문자의_사용과_식의_계산.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_3단원_발전.pdf",
+        "C:\\MathFile\\[동아출판] 중1_수준별문제집_대단원평가_3단원_1회.pdf"
+      ]
+    }
+  ],
+  "laterCoverage": [
+    {
+      "unitKey": "coordinatePlane",
+      "targetFixture": "coordinatePlane.sources.txt",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅲ-1. 좌표평면과 그래프.pdf",
+        "C:\\MathFile\\중1_ 미래엔_중단원마무리_3_1_좌표평면과_그래프.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_4단원_발전.pdf"
+      ]
+    },
+    {
+      "unitKey": "basicGeometry",
+      "targetFixture": "basicGeometry.sources.txt",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅳ-1. 기본 도형.pdf",
+        "C:\\MathFile\\중1_ 미래엔_중단원마무리_4_1_기본_도형.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_5단원_발전.pdf"
+      ]
+    },
+    {
+      "unitKey": "planeFigures",
+      "targetFixture": "planeFigures.sources.txt",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅴ-1. 평면도형의 성질.pdf",
+        "C:\\MathFile\\중1_ 미래엔_중단원마무리_5_1_평면도형의_성질.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_6단원_발전.pdf"
+      ]
+    },
+    {
+      "unitKey": "solidFigures",
+      "targetFixture": "solidFigures.sources.txt",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅴ-2. 입체도형의 성질.pdf",
+        "C:\\MathFile\\중1_ 미래엔_중단원마무리_5_2_입체도형의_성질.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_7단원_발전.pdf"
+      ]
+    },
+    {
+      "unitKey": "dataInterpretation",
+      "targetFixture": "dataInterpretation.sources.txt",
+      "sources": [
+        "C:\\MathFile\\[수준별 문제은행_발전] Ⅵ-1. 자료의 정리와 해석.pdf",
+        "C:\\MathFile\\중1_ 미래엔_중단원마무리_6_1_자료의_정리와_해석.pdf",
+        "C:\\MathFile\\[동아출판] 중1_단원마무리_8단원_발전.pdf"
+      ]
+    }
+  ]
+}

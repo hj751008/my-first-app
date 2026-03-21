@@ -1,9 +1,8 @@
 [copyright harness]
-- reference root: C:\MathFile
-- reference files scanned: 110
-- plaintext reference sources loaded: 0
-- sample reference files: 100발100중 중등수학 기출 1-1 중간 정답 및 해설.pdf, 22개정 RPM 중학 수학1-1_정답및풀이.pdf, 22개정_중등RPM1-2_정답.pdf, 25년 쎈 1-2 답지.pdf, [2022개정] 중등 최상위라이트1-2해설(01-56)_Crop.pdf, [2022개정]_중등_최상위라이트1-1해설.pdf, [동아출판] 중1_단원마무리_1단원_발전.hwp, [동아출판] 중1_단원마무리_1단원_발전_해설.hwp, [동아출판] 중1_단원마무리_2단원_발전.hwp, [동아출판] 중1_단원마무리_2단원_발전_해설.hwp, [동아출판] 중1_단원마무리_3단원_발전.hwp, [동아출판] 중1_단원마무리_3단원_발전_해설.hwp
-- note: No plaintext references were found under the reference root. Direct phrase comparison is skipped for PDF/HWP-only sources.
+- reference root: C:\Users\tcikh\OneDrive\문서\codex\sujimathAI\app\harness\copyright\fixtures
+- reference files scanned: 10
+- plaintext reference sources loaded: 10
+- sample reference files: README.md, basicGeometry.sources.txt, coordinatePlane.sources.txt, dataInterpretation.sources.txt, integersRational.sources.txt, literalExpressions.sources.txt, planeFigures.sources.txt, primeFactorization.sources.txt, reference-manifest.json, solidFigures.sources.txt
 
 - primeFactorization: safe
 - integersRational: safe

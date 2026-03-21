@@ -1,5 +1,6 @@
 import { mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { extname, join } from "node:path";
+import { pathToFileURL } from "node:url";
 import { basicGeometryContent } from "../../lib/content/basicGeometry.ts";
 import { coordinatePlaneContent } from "../../lib/content/coordinatePlane.ts";
 import { dataInterpretationContent } from "../../lib/content/dataInterpretation.ts";
@@ -52,7 +53,6 @@ const contentTargets: ContentTarget[] = [
   { key: "dataInterpretation", content: dataInterpretationContent },
 ];
 
-const referenceRoot = process.env.SUJI_REFERENCE_ROOT ?? "C:\\MathFile";
 const textExtensions = new Set([".txt", ".md", ".json", ".csv"]);
 const riskyInstructionPhrases = [
   "다음 중",
@@ -72,9 +72,15 @@ function getReportDate() {
   }).format(new Date());
 }
 
+function getReferenceRoot() {
+  return process.env.SUJI_REFERENCE_ROOT ?? "C:\\MathFile";
+}
+
 function normalizeText(value: string) {
   return value
+    .normalize("NFKC")
     .toLowerCase()
+    .replace(/[\uE000-\uF8FF]/gu, " ")
     .replace(/[\r\n\t]+/g, " ")
     .replace(/[^\p{L}\p{N}\s]/gu, " ")
     .replace(/\s+/g, " ")
@@ -411,7 +417,7 @@ function checkPlaintextReferenceOverlap(entries: AppTextEntry[], referenceScan: 
 }
 
 export function createCopyrightReport() {
-  const referenceScan = scanReferences(referenceRoot);
+  const referenceScan = scanReferences(getReferenceRoot());
   const issueMap = createIssueBuckets();
   const appEntries = contentTargets.flatMap(collectAppTexts);
 
@@ -490,4 +496,8 @@ function main() {
   console.log(`Saved report: ${reportPath}`);
 }
 
-main();
+const entryUrl = process.argv[1] ? pathToFileURL(process.argv[1]).href : null;
+
+if (entryUrl === import.meta.url) {
+  main();
+}

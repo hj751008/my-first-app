@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
 import { createContentReport } from "../content/validate-content.mts";
+import { createCopyrightReport } from "../copyright/similarity-check.mts";
 import { createTutorScenarioReport } from "../tutor/run-tutor-scenarios.mts";
 
 type StepResult = {
@@ -43,6 +44,30 @@ function runTutorStep(): StepResult {
     stdout: report,
     stderr: "",
   };
+}
+
+function runCopyrightStep(): StepResult {
+  const previousReferenceRoot = process.env.SUJI_REFERENCE_ROOT;
+  process.env.SUJI_REFERENCE_ROOT = join(process.cwd(), "harness", "copyright", "fixtures");
+
+  try {
+    const { report, highRiskCount } = createCopyrightReport();
+
+    return {
+      label: "copyright harness",
+      command: "internal createCopyrightReport() with local fixtures",
+      exitCode: highRiskCount > 0 ? 1 : 0,
+      status: highRiskCount === 0 ? "pass" : "fail",
+      stdout: report,
+      stderr: "",
+    };
+  } finally {
+    if (previousReferenceRoot === undefined) {
+      delete process.env.SUJI_REFERENCE_ROOT;
+    } else {
+      process.env.SUJI_REFERENCE_ROOT = previousReferenceRoot;
+    }
+  }
 }
 
 function runShellStep(
@@ -143,6 +168,7 @@ function main() {
   const results = [
     runContentStep(),
     runTutorStep(),
+    runCopyrightStep(),
     runShellStep("lint", "npm run lint", "npm.cmd", ["run", "lint"]),
     runShellStep("build", "npm run build", "npm.cmd", ["run", "build"]),
   ];

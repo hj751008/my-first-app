@@ -1,0 +1,38 @@
+[reference extract harness]
+- primeFactorization: fixture=primeFactorization.sources.txt, ok=4/4
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅰ-1. 소인수분해.pdf (pages=8, chars=1465)
+  - ok: C:\MathFile\중1_ 미래엔 중단원마무리_1_1_소인수분해.pdf (pages=3, chars=793)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_1단원_발전.pdf (pages=4, chars=1288)
+  - ok: C:\MathFile\[동아출판] 중1_수준별문제집_대단원평가_1단원_1회.pdf (pages=2, chars=651)
+- integersRational: fixture=integersRational.sources.txt, ok=4/4
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅰ-2. 정수와 유리수.pdf (pages=8, chars=1438)
+  - ok: C:\MathFile\중1_ 미래엔 중단원마무리_1_2_정수와_유리수.pdf (pages=5, chars=910)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_2단원_발전.pdf (pages=4, chars=1469)
+  - ok: C:\MathFile\[동아출판] 중1_수준별문제집_대단원평가_2단원_1회.pdf (pages=3, chars=777)
+- literalExpressions: fixture=literalExpressions.sources.txt, ok=4/4
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅱ-1. 문자의 사용과 식의 계산.pdf (pages=8, chars=1208)
+  - ok: C:\MathFile\중1_ 미래엔 중단원마무리_2_1_문자의_사용과_식의_계산.pdf (pages=5, chars=808)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_3단원_발전.pdf (pages=4, chars=1887)
+  - ok: C:\MathFile\[동아출판] 중1_수준별문제집_대단원평가_3단원_1회.pdf (pages=4, chars=459)
+- coordinatePlane: fixture=coordinatePlane.sources.txt, ok=3/3
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅲ-1. 좌표평면과 그래프.pdf (pages=7, chars=1710)
+  - ok: C:\MathFile\중1_ 미래엔_중단원마무리_3_1_좌표평면과_그래프.pdf (pages=3, chars=1058)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_4단원_발전.pdf (pages=8, chars=1881)
+- basicGeometry: fixture=basicGeometry.sources.txt, ok=3/3
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅳ-1. 기본 도형.pdf (pages=3, chars=2812)
+  - ok: C:\MathFile\중1_ 미래엔_중단원마무리_4_1_기본_도형.pdf (pages=6, chars=1166)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_5단원_발전.pdf (pages=4, chars=1826)
+- planeFigures: fixture=planeFigures.sources.txt, ok=3/3
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅴ-1. 평면도형의 성질.pdf (pages=8, chars=1610)
+  - ok: C:\MathFile\중1_ 미래엔_중단원마무리_5_1_평면도형의_성질.pdf (pages=7, chars=872)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_6단원_발전.pdf (pages=4, chars=2142)
+- solidFigures: fixture=solidFigures.sources.txt, ok=3/3
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅴ-2. 입체도형의 성질.pdf (pages=8, chars=2113)
+  - ok: C:\MathFile\중1_ 미래엔_중단원마무리_5_2_입체도형의_성질.pdf (pages=7, chars=1188)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_7단원_발전.pdf (pages=4, chars=1968)
+- dataInterpretation: fixture=dataInterpretation.sources.txt, ok=3/3
+  - ok: C:\MathFile\[수준별 문제은행_발전] Ⅵ-1. 자료의 정리와 해석.pdf (pages=8, chars=1470)
+  - ok: C:\MathFile\중1_ 미래엔_중단원마무리_6_1_자료의_정리와_해석.pdf (pages=5, chars=1462)
+  - ok: C:\MathFile\[동아출판] 중1_단원마무리_8단원_발전.pdf (pages=5, chars=2492)
+
+[summary] groups=8, sources=27, extracted=27, fixture_dir=C:\Users\tcikh\OneDrive\문서\codex\sujimathAI\app\harness\copyright\fixtures
