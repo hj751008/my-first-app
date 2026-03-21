@@ -27,6 +27,7 @@
 - Parent and teacher summary card on the middle-1 dashboard.
 - Printable parent report at `/middle-1/report`.
 - Client-side reset action for local test study data.
+- Problem-generation workflow docs are available for batch authoring and review.
 
 ## Core Architecture
 - Shared unit config: `/app/lib/units.ts`
@@ -49,6 +50,7 @@
 - PDF extraction still leaves some symbol and number noise because some source files use custom embedded fonts.
 - `preflight` can still show `ready-with-manual-check` inside the Codex sandbox even when the real shell result is `ready`.
 - `C:\MathFile` remains a local reference store and is not part of git or deployment.
+- Newly expanded problem banks still need the same batch treatment for the remaining units after `primeFactorization` and `integersRational`.
 
 ## Non-Negotiable Rules
 - External math files are reference material only.
